@@ -1,0 +1,18 @@
+
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M26.7,4 L5.3,4 C4.58652194,4.0107308 4.0107308,4.58652194 4,5.3 L4,26.7 C4.0107308,27.4134781 4.58652194,27.9892692 5.3,28 L16.8,28 L16.8,18.7 L13.7,18.7 L13.7,15.1 L16.8,15.1 L16.8,12.4 C16.8,9.3 18.7,7.6 21.5,7.6 C22.8,7.6 24,7.7 24.3,7.7 L24.3,11 L22.4,11 C20.9,11 20.6,11.7 20.6,12.8 L20.6,15.1 L24.2,15.1 L23.7,18.7 L20.6,18.7 L20.6,28 L26.7,28 C27.4134781,27.9892692 27.9892692,27.4134781 28,26.7 L28,5.3 C27.9892692,4.58652194 27.4134781,4.0107308 26.7,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.631677964">
+        <g id="Desktop-HD" transform="translate(-581.000000, -4576.000000)">
+            <g id="Group-3" transform="translate(481.000000, 4572.000000)">
+                <g id="icon/social/facebook/32" transform="translate(96.500000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="icon-color" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

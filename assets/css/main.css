@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/cairo/v10/SLXGc1nY6HkvalIkTpumxdt0UX8.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  }
+
+body, html {
+    font-family: 'Cairo';
+    direction:rtl;
+    min-height:100%;
+    height:100%;
+    margin:0px;
+    font-size: 12pt;
+    
+}
+
+img.tt-logo {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    transition: all 1s ease;
+    height:50px;
+    margin:25px;
+  }
+ 
+  img.tt-logo:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+  }
+
+
+.gside {
+    width:16%; float:right; 
+}
+
+.gsideDiv{
+    width:80%;margin-right:140px; background:white; min-height:500px;
+    text-align: center; padding:25px; padding-bottom:0px;
+}
+.gsideDiv img{
+    width:100px; margin-bottom:25px;
+}
+@media screen and (max-width: 1190px) {
+    .gsideDiv{
+        margin-right: 115px;
+    }
+}
+
+.shadowy
+{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    background-color:white;
+}
