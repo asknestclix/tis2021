@@ -836,7 +836,7 @@ p {
   font-weight: 500;
   font-size: 14px;
   color: var(--white);
-  background: var(--primary-color);
+  background: var(--heading-color);
   padding: 5px 20px;
   display: inline-block;
   margin-bottom: 20px;
@@ -1641,13 +1641,16 @@ p {
 .ud-page-banner {
   padding-top: 130px;
   padding-bottom: 80px;
-  background: var(--primary-color);
-  background-image: url("../images/banner/banner-bg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
 }
-
+.ed1-page-banner {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  height:100vh;
+  background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.9528405112044818) 0%, rgba(183,183,183,0.29177608543417366) 13%, rgba(255,255,255,0.6895351890756303) 32%, rgba(9,9,121,0) 100%);
+}
 .ud-banner-content {
   text-align: right;
   margin: auto;
@@ -1657,6 +1660,7 @@ p {
   color: var(--white);
   font-size: 38px;
   font-weight: 600;
+  margin-top:9vh;
 }
 
 /* ====== Login CSS ====== */
