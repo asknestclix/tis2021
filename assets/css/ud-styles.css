@@ -344,7 +344,7 @@ p {
 
 .navbar-nav .nav-item > a:hover, .navbar-nav .nav-item > a.active {
   color: var(--white);
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -651,13 +651,13 @@ p {
 }
 
 .ud-hero-image .shape.shape-1 {
-  bottom: 0;
-  left: -30px;
+  bottom: 0px;
+  left: -130px;
 }
 
 .ud-hero-image .shape.shape-2 {
-  top: -20px;
-  right: -20px;
+  top: 30px;
+  right: 160px;
 }
 
 /* ===== Features CSS ===== */
@@ -1649,8 +1649,7 @@ p {
 }
 
 .ud-banner-content {
-  text-align: center;
-  max-width: 600px;
+  text-align: right;
   margin: auto;
 }
 
