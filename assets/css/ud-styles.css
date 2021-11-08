@@ -332,6 +332,7 @@ p {
   transition: all 0.3s ease-out 0s;
   padding: 15px 0px;
   position: relative;
+  opacity: .4;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -339,18 +340,21 @@ p {
     display: block;
     padding: 8px 0;
     color: var(--heading-color);
+    
   }
 }
 
 .navbar-nav .nav-item > a:hover, .navbar-nav .nav-item > a.active {
   color: var(--white);
-  opacity: 1;
+    opacity: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-nav .nav-item > a:hover, .navbar-nav .nav-item > a.active {
     color: var(--primary-color);
     opacity: 1;
+    
   }
 }
 
@@ -475,6 +479,7 @@ p {
 .sticky .navbar-nav .nav-item:hover > a {
   color: var(--primary-color);
   opacity: 1;
+  
 }
 
 .sticky .navbar-nav .nav-item a {
@@ -484,6 +489,7 @@ p {
 .sticky .navbar-nav .nav-item a.active, .sticky .navbar-nav .nav-item a:hover {
   color: var(--primary-color);
   opacity: 1;
+  border-bottom:2px solid var(--primary-color);
 }
 
 .sticky .navbar-btn .ud-main-btn.ud-login-btn {
@@ -1644,12 +1650,23 @@ p {
   height:100vh;
   background:rgba(0,0,0,0.7);
 }
+.ud-page-banner2 {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  height:100vh;
+  background-color: rgba(8, 59, 31, 0.9); background-image: url('../images/others/pattern_new2.png');
+}
 .ed1-page-banner {
   padding-top: 130px;
   padding-bottom: 80px;
   height:100vh;
   background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,0.9528405112044818) 0%, rgba(183,183,183,0.29177608543417366) 13%, rgba(255,255,255,0.6895351890756303) 32%, rgba(9,9,121,0) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.9528405112044818) 0%, rgba(183,183,183,0.29177608543417366) 13%, rgba(255,255,255,0.6895351890756303) 32%, rgba(9,9,121,0) 100%);
+}
+.ed2-page-banner{
+  height:100%;overflow-y:scroll; overflow-x: hidden;
+  background: rgb(195,142,0);
+  background: radial-gradient(circle, rgba(195,142,0,1) 36%, rgba(255,255,255,0) 100%); 
 }
 .ud-banner-content {
   text-align: right;
@@ -1660,7 +1677,6 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9528405112044818) 0%, rgba(183,
   color: var(--white);
   font-size: 38px;
   font-weight: 600;
-  margin-top:9vh;
 }
 
 /* ====== Login CSS ====== */

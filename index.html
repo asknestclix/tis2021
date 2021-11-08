@@ -70,19 +70,19 @@
               </button>
 
               <div class="navbar-collapse">
-                <ul id="nav" class="navbar-nav mx-auto" ssty>
+                <ul id="nav" class="navbar-nav mx-auto">
                   <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#home">حول مدارسنا</a>
+                    <a class="ud-menu-scroll" href="حول-مدارسنا/index.html">حول مدارسنا</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#about">المراحل التعليمية</a>
+                    <a class="ud-menu-scroll" href="المراحل-التعليمية/index.html">المراحل التعليمية</a>
                   </li>
                   <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#pricing">استكشف برامجنا</a>
+                    <a class="ud-menu-scroll" href="استكشف-برامجنا/index.html">استكشف برامجنا</a>
                   </li>
                   <li class="nav-item">
-                    <a>التواصل مع المراحل</a>
+                    <a href="التواصل مع المراحل/index.html">التواصل مع المراحل</a>
                   </li>
                   <!--
                   <li class="nav-item nav-item-has-children">
@@ -687,6 +687,7 @@
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
+      /*
       pageLink.forEach((elem) => {
         elem.addEventListener("click", (e) => {
           e.preventDefault();
@@ -696,7 +697,7 @@
           });
         });
       });
-
+     */
       // section menu active
       function onScroll(event) {
         const sections = document.querySelectorAll(".ud-menu-scroll");
@@ -708,6 +709,7 @@
         for (let i = 0; i < sections.length; i++) {
           const currLink = sections[i];
           const val = currLink.getAttribute("href");
+          try {
           const refElement = document.querySelector(val);
           const scrollTopMinus = scrollPos + 73;
           if (
@@ -721,6 +723,7 @@
           } else {
             currLink.classList.remove("active");
           }
+        } catch(ex){}
         }
       }
 

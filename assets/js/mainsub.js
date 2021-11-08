@@ -15,9 +15,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/logo-2.svg";
+      logo.src = "../assets/images/logo/logo-2.svg";
     } else {
-      logo.src = "assets/images/logo/logo.png";
+      logo.src = "../assets/images/logo/logo.png";
     }
 
     // show or hide the back-top-top button
@@ -90,6 +90,30 @@
   document.querySelector(".back-to-top").onclick = () => {
     scrollTo(document.documentElement);
   };
+  //window.onload = populateSelect();
+  function populateSelect() {
 
-  
+    // CREATE AN XMLHttpRequest OBJECT, WITH GET METHOD.
+    var xhr = new XMLHttpRequest(), 
+        method = 'GET',
+        overrideMimeType = 'application/json',
+        url = 'http://nestclix.ca/contactList.txt';        // ADD THE URL OF THE FILE.
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            
+            // PARSE JSON DATA.
+            var birds = JSON.parse(xhr.responseText);
+
+            var ele = document.getElementById('sel');
+            for (var i = 0; i < birds.length; i++) {
+                // BIND DATA TO <select> ELEMENT.
+                ele.innerHTML = ele.innerHTML +
+                    '<option value="' + birds[i].ID + '">' + birds[i].Name + '</option>';
+            }
+        }
+    };
+    xhr.open(method, url, true);
+    xhr.send();
+}
 })();
