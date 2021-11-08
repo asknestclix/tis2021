@@ -21,7 +21,7 @@ function InitializeCalendar() {
         type: "POST",
         contentType: "application/json",
         data: "{'StartDate': '" + startDate + "', 'EndDate': '" + endDate + "', 'PlaceID': '1' }",
-        url: "http://tiseventcalendar.gearhostpreview.com/TISCalendar.aspx/GetCalendarData",
+        url: "../TISCalendar.aspx/GetCalendarData",
         dataType: "json",
         success: function (data) {
 
