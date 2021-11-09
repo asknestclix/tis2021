@@ -9,6 +9,19 @@ function InitializeCalendar(calID) {
     // alert('in');
     //-- start date and end date criteria.. you can get it from user input.. 
 
+    switch (calID) {
+        case "0" : document.getElementById("calTitle").innerHTML = "جميع الأقسام"; break;
+        case "1" : document.getElementById("calTitle").innerHTML = "رياض الأطفال"; break;
+        case "2" : document.getElementById("calTitle").innerHTML = "الابتدائي"; break;
+        case "3" : document.getElementById("calTitle").innerHTML = "الابتدائي عليا بنات"; break;
+        case "4" : document.getElementById("calTitle").innerHTML = "الابتدائي عليا بنين"; break;
+        case "5" : document.getElementById("calTitle").innerHTML = "المتوسط بنات"; break;
+        case "6" : document.getElementById("calTitle").innerHTML = "المتوسط بنين"; break;
+        case "7" : document.getElementById("calTitle").innerHTML = "الثانوي بنات"; break;
+        case "8" : document.getElementById("calTitle").innerHTML = "الثانوي بنين"; break;
+        case "9" : document.getElementById("calTitle").innerHTML = "الدبلوما الأمريكية بنات "; break;
+        case "10" : document.getElementById("calTitle").innerHTML = "الدبلوما الأمريكية بنين "; break;
+    }
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
