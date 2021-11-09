@@ -79,10 +79,10 @@
                                                 <asp:Label ID="Labeldate" runat="server" Text=""></asp:Label>
                                             </div>
                                               <div class="card-text">
-                                                <center><small>تم حجز الموعد و سيتم التواصل معكم في حال طرأ أي تغيير على الموعد </small> </center>
+                                                <small style="text-align: center; margin-top: 25px;">تم حجز الموعد و سيتم التواصل معكم في حال طرأ أي تغيير على الموعد </small>
                                             </div>
                                             <br />
-                                            <a style="display:none" href="#" onclick="myFunction()" class="btn btn-primary stretched-link pull-left">طباعة</a>
+                                            <a style="display:none !important" href="#" onclick="myFunction()" class="btn btn-primary stretched-link pull-left">طباعة</a>
                                           
                                         </div>
                                     </div>

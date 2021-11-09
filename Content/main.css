@@ -1,0 +1,35 @@
+﻿@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('/fonts/DroidKufi-Regular.eot');
+    src: url('/fonts/DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/DroidKufi-Regular.woff') format('woff'),
+         url('/fonts/DroidKufi-Regular.ttf') format('truetype'),
+         url('/fonts/DroidKufi-Regular.svg#ge_ss_twolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Droid Arabic Kufi';
+    background-color:white;
+    direction:rtl;
+    margin:0px;
+    font-size: 12pt;
+}
+
+
+.shadowBox
+{
+    
+    background:rgba(0,0,0,0.2); padding:15px; 
+}
+
+.shadowBoxWhite
+{
+    background:rgba(255,255,255,0.8); padding:15px; margin-top:15px; padding-top:0;
+}
+.shadowBox h3 { font-size:16pt; line-break:normal; line-height:30pt; color:white; margin:0px}
+
+.topGap{margin-top:15px;}
+
+.textBox {padding:5px; background:#dedede; color:gray; font-size:14pt; border:none; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding-right:15px; width:100%; border:gainsboro 1px solid}
