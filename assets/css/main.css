@@ -298,7 +298,7 @@ img.tt-logo {
 
   .calendarTab{
     background-color: rgba(0,0,0,0.5); color:white; text-align: right; padding:15px;margin-bottom: 1px;
-    cursor: pointer; opacity: 0.7; width:100%;
+    cursor: pointer; opacity: 0.5; width:100%;
   }
   .calendarTab:hover {
     opacity: 1;
