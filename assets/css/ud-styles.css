@@ -1669,7 +1669,7 @@ p {
   background: radial-gradient(circle, rgba(195,142,0,1) 36%, rgba(255,255,255,0) 100%); 
 }
 .ed3-page-banner{
-  height:100%;overflow-y:scroll; overflow-x: hidden;
+  min-height:100%;overflow-x: hidden;
   background: rgb(11, 58, 23);
   background: radial-gradient(circle, rgba(11, 58, 23,0.5) 36%, rgba(11, 58, 23,0) 100%); 
 }
