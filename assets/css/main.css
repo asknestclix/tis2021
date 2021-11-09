@@ -306,7 +306,7 @@ img.tt-logo {
   }
 
   .calendarItem{
-    float:right; width:16.5%; min-height:200px; background:rgba(255,255,255,0.8); outline: 1px solid rgba(25); margin-top:1px; margin-left:1px;
+    float:right; width:16.5%; min-height:150px; background:rgba(255,255,255,0.8); outline: 1px solid rgba(25); margin-top:1px; margin-left:1px;
     opacity:0.8; cursor: pointer;
     transition: all 200ms linear;
   }
@@ -317,5 +317,5 @@ img.tt-logo {
   }
 
   .calendarBlank { 
-    float:right; width:16.5%; min-height:200px; background:rgba(0, 0, 0, 0.3); outline: 1px solid rgba(25); margin-top:1px; margin-left:1px;
+    float:right; width:16.5%; min-height:150px; background:rgba(0, 0, 0, 0.3); outline: 1px solid rgba(25); margin-top:1px; margin-left:1px;
   }
