@@ -28,13 +28,13 @@ const showModal = (idx) => {
     $('.modal').addClass('open');
 
     if ($('.modal').hasClass('open')) {
-      $('.ud-page-banner').addClass('blur');
+      $('.cont2').addClass('blur');
     }
     document.getElementById("videoFrame").src = videoList[idx].url;
 }
 $('.close').click(function () {
     $('.modal').removeClass('open');
-    $('.ud-page-banner').removeClass('blur');
+    $('.cont2').removeClass('blur');
 
     document.getElementById("videoFrame").src = "about:blank";
     
