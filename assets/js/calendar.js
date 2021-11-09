@@ -51,7 +51,6 @@ function InitializeCalendar(calID) {
 
             
             let op = data.d;
-            console.error(op.length);
             document.getElementById("calendarContainer").innerHTML = "";
             if (op && op.length > 0) {
                 calData = op;
@@ -110,4 +109,4 @@ function InitializeCalendar(calID) {
 }
 
 
-InitializeCalendar();
+InitializeCalendar(0);
