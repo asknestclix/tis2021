@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <title>الصفحة الرئيسية - مدارس التربية الإسلامية : حول مدارسنا</title>
+    <title>
+      مكتبة الشروحات التعليمية
+       : حول مدارسنا</title>
     <meta name="description" content="إن رؤية مدارس التربية الإسلامية هي المشاركة الفعالة في تطوير الأجيال الناشئة ليصبحوا ناجحين ومبدعين ، ويسهموا بدورٍ إيجابيّ في نمو الوطن واستقراره ونهضة مجتمعه." />
     <meta name="keywords" content="Tarbiyah Islamiyah, " />
 	  <meta name="author" content="O Communications Group">
@@ -28,7 +30,7 @@
 	  <meta name="twitter:creator" content="O Communications Group">
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="../assets/images/tis_logo_dark.png">
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <!-- Open Graph data -->
     <meta property="og:title" content="الصفحة الرئيسية - مدارس التربية الإسلامية : حول مدارسنا" />
 	  <meta property="og:type" content="website" />
@@ -69,9 +71,9 @@
               </button>
 
               <div class="navbar-collapse">
-                <ul id="nav" class="navbar-nav mx-auto" ssty>
+                <ul id="nav" class="navbar-nav mx-auto">
                   <li class="nav-item">
-                    <a class="ud-menu-scroll active" href="#">حول مدارسنا</a>
+                    <a class="ud-menu-scroll" href="#">حول مدارسنا</a>
                   </li>
 
                   <li class="nav-item">
@@ -102,10 +104,24 @@
     <!-- ====== Header End ====== -->
 
     <!-- ====== Banner Start ====== -->
-    <section class="ud-page-banner Aligner">
+    <section class="ud-page-banner cont2 Aligner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1 col-md-1"></div>
+          <div class="col-lg-11 col-md-11">
+            <div class="ud-banner-content wow fadeInUp Aligner-item" data-wow-delay=".2s">
+              <h2 style="margin-bottom:25px;color:white">
+                مكتبة الشروحات التعليمية
+                </h2>
+
+               <div style="width:100%" id="videoContainer">
+               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <iframe src="http://tischools.cc/VideoGallery.html" allowtransparency="true" style="margin-top:10vh;height: 90vh; width:100%; border:none; background-color: transparent;"></iframe>
-    
     </section>
     <!-- ====== Banner End ====== -->
 
@@ -198,6 +214,15 @@
 
       <div style="opacity:0.5; float:left;margin-top:-100px; width:250px; height:230px; background-image: url('../assets/images/others/dotted.png');"></div>
     </section>
+
+    <div class="modal">
+      <div class="content" style="width:600px">
+        <div class="close"></div>
+        <div id="content1">
+          <iframe id="videoFrame" src="data:text/html, <h1>Loading..</h1>" allowtransparency="true" style="height:400px; width:520px; border:none; background-color: transparent;"></iframe>
+        </div>
+      </div>
+    </div>
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
@@ -210,5 +235,7 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/mainsub.js"></script>
+    <script src="../assets/js/video.js"></script>
+    
   </body>
 </html>
