@@ -205,8 +205,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                     <div class="col-md-12 col-xs-12 pull-left" style="padding: 10px 5px;">
-                                        <asp:Button ID="ButtonSave" runat="server" CssClass="btn btn-success" Text="حفظ " Style="float: left;" OnClick="ButtonSave_Click" />
+                                     <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                     </div>
+                                     <div class="col-md-10 col-xs-10 pull-left" style="padding: 10px 5px;">
+                                        <asp:Button ID="ButtonSave"  runat="server" CssClass="btn btn-success btn-lg" Text="حفظ " Style="float: right;" OnClick="ButtonSave_Click" />
                                     </div>
                                 </div>
                             </div>

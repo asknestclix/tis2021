@@ -82,7 +82,7 @@
                                                 <center><small>تم حجز الموعد و سيتم التواصل معكم في حال طرأ أي تغيير على الموعد </small> </center>
                                             </div>
                                             <br />
-                                            <a href="#" onclick="myFunction()" class="btn btn-primary stretched-link pull-left">طباعة</a>
+                                            <a style="display:none" href="#" onclick="myFunction()" class="btn btn-primary stretched-link pull-left">طباعة</a>
                                           
                                         </div>
                                     </div>
