@@ -8,7 +8,7 @@ function getUrlVars() {
 function InitializeCalendar(calID) {
     // alert('in');
     //-- start date and end date criteria.. you can get it from user input.. 
-
+    debugger;
     switch (calID) {
         case "0" : document.getElementById("calTitle").innerText = "جميع الأقسام"; break;
         case "1" : debugger;document.getElementById("calTitle").innerText = "رياض الأطفال"; break;
