@@ -1664,7 +1664,7 @@ p {
   background: linear-gradient(180deg, rgba(0,0,0,0.9528405112044818) 0%, rgba(183,183,183,0.29177608543417366) 13%, rgba(255,255,255,0.6895351890756303) 32%, rgba(9,9,121,0) 100%);
 }
 .ed2-page-banner{
-  height:100%;overflow-y:scroll; overflow-x: hidden;
+  min-height:100%;ooverflow-x: hidden;
   background: rgb(195,142,0);
   background: radial-gradient(circle, rgba(195,142,0,1) 36%, rgba(255,255,255,0) 100%); 
 }
