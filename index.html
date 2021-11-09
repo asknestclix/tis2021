@@ -42,6 +42,7 @@
       href="assets/images/others/cropped-faviconMi-32x32.png"
       type="image/svg"
     />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <link rel="icon" href="assets/images/others/cropped-faviconMi-32x32.png" sizes="32x32" />
     <link rel="icon" href="assets/images/others/cropped-faviconMi-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="assets/images/others/cropped-faviconMi-180x180.png" />
@@ -128,7 +129,7 @@
               </div>
 
               <div class="navbar-btn d-none d-sm-inline-block">
-                <a href="login.html" class="ud-main-btn ud-white-btn">
+                <a href="l.html" class="ud-main-btn ud-white-btn">
                   التسجيل
                 </a>
                 <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
@@ -162,7 +163,8 @@
                 <p style="text-align:left; color:White"><i class="lni lni-chevron-left"></i>&nbsp; عرض التقويم</i></p>
               </div>
                </a>
-              <div class="cardGold shape shape-2 wow fadeInUp" data-wow-delay=".50s">
+               
+              <div id="q1" class="cardGold shape shape-2 wow fadeInUp" data-wow-delay=".50s">
                 <h3>حجز زيارة الى المدرسة</h3>
                 Click here to book an appointment to one of our staffs
                 <a><i class="lni lni-chevron-left"></i>&nbsp; احجز الآن</i></a>
@@ -678,6 +680,14 @@
 
       <div style="opacity:0.5; float:left;margin-top:-100px; width:250px; height:230px; background-image: url('assets/images/others/dotted.png');"></div>
     </section>
+    <div class="modal">
+      <div class="content">
+        <div class="close"></div>
+        <div id="content1">
+          <iframe src="http://forms.gearhostpreview.com/Parent/ParentSchoolVisit.aspx" allowtransparency="true" style="width:100%; border:none; background-color: transparent;"></iframe>
+        </div>
+      </div>
+    </div>
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
@@ -690,6 +700,9 @@
     <script src="assets/js/bs_ar/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modalMain.js"></script>
+    
+
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");

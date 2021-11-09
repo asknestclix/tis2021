@@ -239,7 +239,9 @@ img.tt-logo {
   .cont.blur {
     filter: blur(5px);
   }
-  
+  #home.blur{
+    filter: blur(5px);
+  }
   .modal {
     position: fixed;
     top: 0;

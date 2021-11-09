@@ -33,7 +33,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="position: fixed; width: 100%; height: 100vh; overflow-y: scroll;">
-            <div class="container" style="text-align: right;">
+            <div class="container-fluid" style="text-align: right; padding:0; margin:0">
                 <div class="row">
                     <div class="col-md-12" style="margin-top: 125px">
                     </div>
