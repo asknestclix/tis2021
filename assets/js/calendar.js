@@ -38,7 +38,7 @@ function InitializeCalendar(calID) {
 
             
             let op = data.d;
-            console.error(JSON.stringify(op));
+            console.error(op.length);
 
             if (op && op.length > 0) {
                 calData = op;
