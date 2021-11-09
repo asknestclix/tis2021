@@ -35,10 +35,10 @@
         <div style="position: fixed; width: 100%; height: 100vh; overflow-y: scroll;">
             <div class="container-fluid" style="text-align: right; padding:0; margin:0">
                 <div class="row">
-                    <div class="col-md-12" style="margin-top: 125px">
+                    <div class="col-md-12">
                     </div>
-                    <div class="col-md-1 hidden-xs hidden-sm"></div>
-                    <div class="col-md-10 col-xs-12 col-sm-12" style="padding-bottom: 100px">
+                    
+                    <div class="col-md-12 col-xs-12 col-sm-12" style="padding-bottom: 100px">
                         <div class="shadowBoxWhite" style="padding: 15px;">
                             <h3>حجز زيارة الى المدرسة  </h3>
                             <h4>الرجاء تعبئة البيانات التالية  </h4>
