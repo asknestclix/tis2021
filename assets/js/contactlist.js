@@ -446,7 +446,7 @@ var activities = document.getElementById("sel");
 
 const generateTemplate = (item, sec) => {
     let template = "<div class='col-lg-4 col-md-4 wow fadeInRight' data-wow-delay='" + sec + "'>" +
-    "<div style='min-height:50px; background: rgba(0,0,0,0.3); margin-top:12px; margin-bottom:12px; color:white; padding:15px'>" +
+    "<div style='min-height:50px; background: rgba(0,0,0,0.2); margin-top:12px; margin-bottom:12px; color:white; padding:15px'>" +
     "<p style='font-size:16px; color:white; font-weight:800'>" + item.name + "</p>"
     
     let contact = "";
