@@ -5,7 +5,7 @@ function getUrlVars() {
     });
     return vars;
 }
-function InitializeCalendar() {
+function InitializeCalendar(calID) {
     // alert('in');
     //-- start date and end date criteria.. you can get it from user input.. 
 
@@ -24,14 +24,14 @@ function InitializeCalendar() {
     var endDate = ds.getFullYear() + "-" + String(ds.getMonth() + 1).padStart(2, '0') + "-" + String(ds.getDate()).padStart(2, '0');
     
 
-    var PlaceID = getUrlVars()["ID"];
+    var PlaceID = calID ? calID : "0";
     let calData = undefined;
 
     $.ajax({
 
         type: "POST",
         contentType: "application/json",
-        data: "{'StartDate': '" + startDate + "', 'EndDate': '" + endDate + "', 'PlaceID': '0' }",
+        data: "{'StartDate': '" + startDate + "', 'EndDate': '" + endDate + "', 'PlaceID': '" + PlaceID + "' }",
         url: "../TISCalendar.aspx/GetCalendarData",
         dataType: "json",
         success: function (data) {
