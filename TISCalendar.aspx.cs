@@ -80,10 +80,10 @@ public partial class TISCalendar : System.Web.UI.Page
                 }
             }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-
-            throw;
+            LabelG.Text = ex.Message;
+            //throw;
         }
     }
     [WebMethod]
@@ -106,7 +106,10 @@ public partial class TISCalendar : System.Web.UI.Page
         if (PlaceID != 0)
          query = "SELECT EventID, EventTitle, EventDetails, EventdateEN  as 'start' ,EventdateEN  as 'end' FROM     TIS_tblEventsCalendar  where TIS_tblEventsCalendar.CategoryID =" + PlaceID;
         else
-            query = "SELECT EventID, EventTitle, EventDetails, EventdateEN  as 'start' , EventdateEN  as 'end' FROM     TIS_tblEventsCalendar ";
+        {
+            query = "SELECT EventID, EventTitle, EventDetails, EventdateEN  as 'start' , EventdateEN  as 'end' FROM  TIS_tblEventsCalendar ";
+        }
+            
 
         SqlCommand cmd = new SqlCommand(query, conn);
         conn.Open();
@@ -120,18 +123,23 @@ public partial class TISCalendar : System.Web.UI.Page
            
             for (int x = 0; x < dt.Rows.Count; x++)
             {
-                Events.Add(
-           new CalendarEvents()
-           {
-               EventId = Convert.ToInt32(dt.Rows[x]["EventID"]),
-               EventStartDate = Convert.ToDateTime(dt.Rows[x]["start"].ToString()),
-               EventEndDate = Convert.ToDateTime(dt.Rows[x]["end"].ToString()),
-               Title = dt.Rows[x]["EventTitle"].ToString(),
-               EventDescription = dt.Rows[x]["EventDetails"].ToString(),
-               AllDayEvent = false,
+                try
+                {
+                    Events.Add(
+                       new CalendarEvents()
+                       {
+                           EventId = Convert.ToInt32(dt.Rows[x]["EventID"]),
+                           EventStartDate = dt.Rows[x]["start"].ToString(),
+                           EventEndDate = dt.Rows[x]["end"].ToString(),
+                           Title = dt.Rows[x]["EventTitle"].ToString(),
+                           EventDescription = dt.Rows[x]["EventDetails"].ToString(),
+                           AllDayEvent = false,
 
-           }
-               );
+                       }
+                   );
+                }
+                catch (Exception ex) { }
+                
             }
         }
 
@@ -145,9 +153,9 @@ public partial class TISCalendar : System.Web.UI.Page
     {
         public Int64 EventId { get; set; }
 
-        public DateTime EventStartDate { get; set; }
+        public string EventStartDate { get; set; }
 
-        public DateTime EventEndDate { get; set; }
+        public string EventEndDate { get; set; }
 
         public string EventDescription { get; set; }
 

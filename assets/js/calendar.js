@@ -8,102 +8,86 @@ function getUrlVars() {
 function InitializeCalendar() {
     // alert('in');
     //-- start date and end date criteria.. you can get it from user input.. 
-    var startDate = "2018-04-01";
-    var endDate = "2018-04-15";
 
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
 
+    today = yyyy + '-' + mm + '-' + dd;
+
+    var ds = new Date();
+    ds.setMonth(ds.getMonth() + 3);
+
+    
+    var startDate = today;
+    var endDate = ds.getFullYear() + "-" + String(ds.getMonth() + 1).padStart(2, '0') + "-" + String(ds.getDate()).padStart(2, '0');
+    
 
     var PlaceID = getUrlVars()["ID"];
-
+    let calData = undefined;
 
     $.ajax({
 
         type: "POST",
         contentType: "application/json",
-        data: "{'StartDate': '" + startDate + "', 'EndDate': '" + endDate + "', 'PlaceID': '1' }",
+        data: "{'StartDate': '" + startDate + "', 'EndDate': '" + endDate + "', 'PlaceID': '0' }",
         url: "../TISCalendar.aspx/GetCalendarData",
         dataType: "json",
         success: function (data) {
 
-            console.log(data.d);
-            debugger;
-            $('#calendar').empty();
-            var initialLocaleCode = '';
-            if (document.getElementById("HiddenFieldLocate").value == '')
-                initialLocaleCode = 'en';
-            else
-                initialLocaleCode = document.getElementById("HiddenFieldLocate").value;
-            var localeSelectorEl = document.getElementById('locale-selector');
-            var calendarEl = document.getElementById('calendar');
+            
+            let op = data.d;
 
-            var calendar = new FullCalendar.Calendar(calendarEl,
-                {
-                    selectable: true,
-                    headerToolbar: {
-                        left: 'prev,next',
-                        center: 'title',
-                        right: ''
-                    },
-                    //initialDate: '2020-06-12',
-                    locale: initialLocaleCode,
-                    buttonIcons: false, // show the prev/next text
-                    weekNumbers: false,
-                    dayMaxEvents: true, // allow "more" link when too many events
-                    events: $.map(data.d, function (item, i) {
-                        //-- here is the event details to show in calendar view.. the data is retrieved via ajax call will be accessed here
+            if (op && op.length > 0) {
+                calData = op;
 
-                        var eventStartDate = new Date(parseInt(item.EventStartDate.substr(6)));
+                op.sort(function (a, b) {
+                    return new Date(b.EventStartDate) - new Date(a.EventStartDate);
+                });
 
-                        var eventEndDate = new Date(parseInt(item.EventEndDate.substr(6)));
+                op.reverse();
 
-                        var event = new Object();
-                        event.id = item.EventId;
-                        event.start = new Date(eventStartDate.getFullYear(), eventStartDate.getMonth(), eventStartDate.getDate(), eventStartDate.getHours(), 0, 0, 0);
-                        event.end = new Date(eventEndDate.getFullYear(), eventEndDate.getMonth(), eventEndDate.getDate(), eventEndDate.getHours() + 1, 0, 0, 0);
-                        event.title = item.Title;
-                        event.allDay = item.AllDayEvent;
+                let calendarItems = "";
+                let prevDate = "";
+                let prevDesc = "";
+                let countItems = 0;
+                op.forEach(el => {
+                    if (new Date(el.EventStartDate) > new Date(today) ) {
+                        if (prevDate !== el.EventStartDate.toString() && prevDesc !== el.Title.toString()) {
+                            calendarItems += createTemplate(el.EventStartDate, el.Title);
+                            prevDate = el.EventStartDate;
+                            prevDesc = el.Title;
+                            countItems += 1;
+                        }
+                    }
+                });
 
-                        return event;
-                    })
-                    ,
-
-                    dateClick: function (info) {
-                        document.getElementById("HiddenFielddate").value = info.dateStr;
-                        document.getElementById("Buttongetdata").click();
-                        alert('Date: ' + document.getElementById("HiddenFielddate").value);
-                    },
-
-
+                if (countItems < 19) {
+                    let diff = 18 - countItems;
+                    for (var i = 0; i < diff; i++) {
+                        calendarItems += createTemplate("", "");
+                    }
                 }
-            );
-
-            calendar.render();
-
-            // build the locale selector's options
-            calendar.getAvailableLocaleCodes().forEach(function (localeCode) {
-                var optionEl = document.createElement('option');
-                optionEl.value = localeCode;
-                optionEl.selected = localeCode == initialLocaleCode;
-                optionEl.innerText = localeCode;
-                localeSelectorEl.appendChild(optionEl);
-            });
-
-            // when the selected option changes, dynamically change the calendar option
-            localeSelectorEl.addEventListener('change', function () {
-                if (this.value) {
-                    calendar.setOption('locale', this.value);
-                    document.getElementById("HiddenFieldLocate").value = this.value;
-                }
-            });
-
+                var element = document.getElementById("calendarContainer").innerHTML = calendarItems;
+            }
+            
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             //-- log error
-            console.log(textStatus)
+            console.log(textStatus);
         }
     });
 
+    const createTemplate = (startDate, desc) => {
+        let template = "<div style='width: 100%;'>" +
+            "<div class='calendarItem wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
+            "<h5>" + startDate + "</h5>" +
+            "<p style='margin-top:15px'>" + desc + "</p>" +
+            "</div></div>";
 
+        return template;
+    }
 
 
 }
