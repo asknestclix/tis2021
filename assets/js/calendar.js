@@ -78,8 +78,8 @@ function InitializeCalendar(calID) {
                     }
                 });
 
-                if (countItems < 19) {
-                    let diff = 18 - countItems;
+                if (countItems < 25) {
+                    let diff = 24 - countItems;
                     for (var i = 0; i < diff; i++) {
                         calendarItems += createTemplate("", "","blank", secTime);
                         secTime += .1;
