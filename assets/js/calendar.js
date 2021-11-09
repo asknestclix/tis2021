@@ -66,7 +66,7 @@ function InitializeCalendar() {
                 if (countItems < 19) {
                     let diff = 18 - countItems;
                     for (var i = 0; i < diff; i++) {
-                        calendarItems += createTemplate("", "");
+                        calendarItems += createTemplate("", "","blank");
                     }
                 }
                 var element = document.getElementById("calendarContainer").innerHTML = calendarItems;
@@ -79,9 +79,9 @@ function InitializeCalendar() {
         }
     });
 
-    const createTemplate = (startDate, desc) => {
+    const createTemplate = (startDate, desc, typeItem) => {
         let template = "<div style='width: 100%;'>" +
-            "<div class='calendarItem wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
+            "<div class='" + typeItem ? "calendarBlank " : "calendarItem " + "wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
             "<h5>" + startDate + "</h5>" +
             "<p style='margin-top:15px'>" + desc + "</p>" +
             "</div></div>";

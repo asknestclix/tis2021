@@ -315,3 +315,7 @@ img.tt-logo {
     opacity: 1;
     transition: all 200ms linear;
   }
+
+  .calendarBlank {
+    float:right; width:16.5%; min-height:200px; background:rgba(0, 0, 0, 0.7); outline: 1px solid rgba(25); margin-top:1px; margin-left:1px;
+  }
