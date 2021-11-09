@@ -81,7 +81,7 @@ function InitializeCalendar() {
 
     const createTemplate = (startDate, desc, typeItem) => {
         let template = "<div style='width: 100%;'>" +
-            "<div class='" + typeItem ? "calendarBlank " : "calendarItem " + "wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
+            "<div class='" + (typeItem ? "calendarBlank " : "calendarItem ") + "wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
             "<h5>" + startDate + "</h5>" +
             "<p style='margin-top:15px'>" + desc + "</p>" +
             "</div></div>";
