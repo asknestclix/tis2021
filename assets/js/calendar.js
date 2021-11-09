@@ -57,7 +57,7 @@ function InitializeCalendar(calID) {
                 op.forEach(el => {
                     if (new Date(el.EventStartDate) > new Date(today) ) {
                         if (prevDate !== el.EventStartDate.toString() && prevDesc !== el.Title.toString()) {
-                            calendarItems += createTemplate(el.EventStartDate, el.Title, secTime);
+                            calendarItems += createTemplate(el.EventStartDate, el.Title, undefined, secTime);
                             prevDate = el.EventStartDate;
                             prevDesc = el.Title;
                             countItems += 1;
@@ -85,7 +85,7 @@ function InitializeCalendar(calID) {
 
     const createTemplate = (startDate, desc, typeItem, sec) => {
         let template = "<div style='width: 100%;'>" +
-            "<div class='" + (typeItem ? "calendarBlank " : "calendarItem ") + "wow fadeInUp' data-wow-delay='.1s' style = 'padding:15px; text-align:right' >" +
+            "<div class='" + (typeItem ? "calendarBlank " : "calendarItem ") + "wow fadeInUp' data-wow-delay='" + sec + "s' style = 'padding:15px; text-align:right' >" +
             "<h5>" + startDate + "</h5>" +
             "<p style='margin-top:15px'>" + desc + "</p>" +
             "</div></div>";
