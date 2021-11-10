@@ -28,7 +28,7 @@
             margin: 0px;
             font-size: 12pt;
         }
-        .label{
+        label{
             font-size: 8pt;
             margin-right: 5px;;
         }
@@ -207,9 +207,9 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                     <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                     <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                      </div>
-                                     <div class="col-md-10 col-xs-10 pull-left" style="padding: 10px 5px;">
+                                     <div class="col-md-10 col-xs-8 pull-left" style="padding: 10px 5px;">
                                         <asp:Button ID="ButtonSave"  runat="server" CssClass="btn btn-success btn-lg" Text="حفظ " Style="float: right; margin-right:10px; min-width: 150px;" OnClick="ButtonSave_Click" />
                                     </div>
                                 </div>
