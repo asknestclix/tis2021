@@ -127,7 +127,7 @@
                                     <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         حجز موعد لما يلي 
                                     </div>
-                                    <div class="col-md-9 col-xs-7 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-9 col-xs-8 pull-right" style="padding: 10px 5px;">
                                         <asp:RadioButtonList ID="RadioButtonListVisitFor" RepeatColumns="5" RepeatDirection="Vertical" runat="server">
                                             <asp:ListItem Text="استكمال التسجيل  &nbsp;  &nbsp;  &nbsp;" Value="1"></asp:ListItem>
                                             <asp:ListItem Text="سحب ملف &nbsp;  &nbsp;  &nbsp;" Value="2"></asp:ListItem>
@@ -135,7 +135,8 @@
                                         </asp:RadioButtonList>
 
                                     </div>
-                                    <div class="col-md-1 col-xs-12 pull-right" style="padding: 10px 5px;"></div>
+
+                                    
                                     <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
                                         الموضوع 
                                     </div>
