@@ -289,7 +289,7 @@ img.tt-logo {
   .modal2 .content {
     position: relative;
     padding:35px; padding-top: 50px;
-    width: 100%;
+    width: 70%;
     max-height: 80vh;
     overflow-y: scroll;
     border-radius: 0px;
