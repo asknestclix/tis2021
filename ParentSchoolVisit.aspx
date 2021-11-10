@@ -28,6 +28,10 @@
             margin: 0px;
             font-size: 12pt;
         }
+        .label{
+            font-size: 8pt;
+            margin-right: 5px;;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +94,7 @@
 
 
                                 <div class="col-md-12 col-xs-12 pull-right" style="padding: 0px 5px;">
-                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 0px 5px;">
                                         البريد الالكتروني
                                       
                                     </div>
@@ -101,7 +105,7 @@
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBoxEmail" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
 
-                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 0px 5px;">
                                         المرحلة
                                       
                                     </div>
