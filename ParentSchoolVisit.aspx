@@ -32,7 +32,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="position: fixed; width: 100%; height: 100vh; overflow-y: scroll;">
+        <div style="position: fixed; width: 100%; height: 100vh; overflow-y: scroll; overflow-x: hidden;">
             <div class="container-fluid" style="text-align: right; padding:0; margin:0">
                 <div class="row">
                     <div class="col-md-12">
@@ -65,11 +65,11 @@
 
                                 <div class="col-md-12 col-xs-12 pull-right" style="padding: 10px 5px;">
 
-                                    <div class="col-md-2 col-xs-6 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         اسم الطالب/الطالبة
                                       
                                     </div>
-                                    <div class="col-md-3 col-xs-6 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-3 col-xs-8 pull-right" style="padding: 10px 5px;">
                                         <asp:TextBox ID="TextBoxParentName" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-md-1 col-xs-12 pull-right" style="padding: 10px 5px;">
