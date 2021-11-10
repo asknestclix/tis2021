@@ -24,7 +24,7 @@ $('#q1').click(function () {
     
 });
 $('#grades').click(function () {
-    debugger;
+
   showModal2();
   
 });
