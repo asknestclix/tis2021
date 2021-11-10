@@ -89,7 +89,7 @@
                                 </div>
 
 
-                                <div class="col-md-12 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                <div class="col-md-12 col-xs-12 pull-right" style="padding: 0px 5px;">
                                     <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         البريد الالكتروني
                                       
@@ -117,18 +117,17 @@
                                             <asp:ListItem Text="القبول والتسجيل" Value="7"></asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
-                                    <div class="col-md-6 col-xs-12 pull-right" style="padding: 10px 5px;">
-                                    </div>
-                                    <div class="col-md-1 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    
+                                    <div class="col-md-1 col-xs-1 pull-right" style="padding: 10px 5px;">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" InitialValue="0" ControlToValidate="DropDownListDivision" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 col-xs-12 pull-right" style="padding: 0 0px; margin: 0">
-                                    <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         حجز موعد لما يلي 
                                     </div>
-                                    <div class="col-md-9 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-9 col-xs-7 pull-right" style="padding: 10px 5px;">
                                         <asp:RadioButtonList ID="RadioButtonListVisitFor" RepeatColumns="5" RepeatDirection="Vertical" runat="server">
                                             <asp:ListItem Text="استكمال التسجيل  &nbsp;  &nbsp;  &nbsp;" Value="1"></asp:ListItem>
                                             <asp:ListItem Text="سحب ملف &nbsp;  &nbsp;  &nbsp;" Value="2"></asp:ListItem>
