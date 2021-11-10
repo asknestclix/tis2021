@@ -209,7 +209,7 @@
                                 <div class="row">
                                      <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                      </div>
-                                     <div class="col-md-10 col-xs-7 pull-left" style="padding: 10px 5px;">
+                                     <div class="col-md-10 col-xs-6 pull-left" style="padding: 10px 5px;">
                                         <asp:Button ID="ButtonSave"  runat="server" CssClass="btn btn-success btn-lg pull-left" Text="حفظ " Style="float: right; margin-right:10px; min-width: 150px;" OnClick="ButtonSave_Click" />
                                     </div>
                                 </div>
