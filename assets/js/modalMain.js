@@ -1,4 +1,4 @@
-const showModal = () => {
+const showModalMain = () => {
     
     $('.modal').addClass('open');
 
@@ -14,13 +14,17 @@ const showModal2 = () => {
 
   if ($('.modal2').hasClass('open')) {
     $('#home').addClass('blur');
+    $('#cont').addClass('blur');
+    $('.cont2').addClass('blur');
+    $('body').addClass('noScroll');
+    
   }
 
 
 }
 $('#q1').click(function () {
     
-    showModal();
+  showModalMain();
     
 });
 $('#grades').click(function () {
@@ -33,6 +37,8 @@ $('.close').click(function () {
     $('.modal').removeClass('open');
     $('.modal2').removeClass('open');
     $('#home').removeClass('blur');
-
+    $('#cont').removeClass('blur');
+    $('.cont2').removeClass('blur');
+    $('body').removeClass('noScroll');
     
   });

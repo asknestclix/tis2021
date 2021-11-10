@@ -26,7 +26,7 @@ const loadVideoItems = () => {
 
 const showModal = (idx) => {
     $('.modal').addClass('open');
-
+    $('body').addClass('noScroll');
     if ($('.modal').hasClass('open')) {
       $('.cont2').addClass('blur');
     }
@@ -35,7 +35,7 @@ const showModal = (idx) => {
 $('.close').click(function () {
     $('.modal').removeClass('open');
     $('.cont2').removeClass('blur');
-
+    $('body').removeClass('noScroll');
     document.getElementById("videoFrame").src = "about:blank";
     
 });

@@ -23,7 +23,8 @@ $(function () {
     $('.modal').addClass('open');
 
     if ($('.modal').hasClass('open')) {
-      $('.cont').addClass('blur');
+      $('#home').addClass('blur');
+      $('body').addClass('noScroll');
     }
   }
   $('#op1').click(function () {
@@ -59,8 +60,8 @@ $(function () {
   });
   $('.close').click(function () {
     $('.modal').removeClass('open');
-    $('.cont').removeClass('blur');
-
+    $('#home').removeClass('blur');
+    $('body').removeClass('noScroll');
     
   });
 });

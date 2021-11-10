@@ -30,7 +30,7 @@
 	  <meta name="twitter:creator" content="O Communications Group">
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="../assets/images/tis_logo_dark.png">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='../assets/js/jquery.min.js'></script>
     <!-- Open Graph data -->
     <meta property="og:title" content="الصفحة الرئيسية - مدارس التربية الإسلامية : حول مدارسنا" />
 	  <meta property="og:type" content="website" />
@@ -93,7 +93,7 @@
                 <a href="http://onlineregistration.tischools.cc/" target="_blank" class="ud-main-btn ud-white-btn">
                   التسجيل
                 </a>
-                <a id="grades" class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+                <a id="grades" class="ud-main-btn ud-white-btn" href="#">
                   الدرجات
                 </a>
               </div>
@@ -222,6 +222,14 @@
         </div>
       </div>
     </div>
+    <div class="modal2">
+      <div class="content">
+        <div class="close"></div>
+        <div id="content1">
+          <iframe src="http://gradesbucket.tischools.cc/newgrades.aspx" allowtransparency="true" style="height: 70vh; width:100%; border:none; background-color: transparent; overflow-x: hidden;"></iframe>
+        </div>
+      </div>
+    </div>
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
@@ -235,6 +243,6 @@
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/mainsub.js"></script>
     <script src="../assets/js/video.js"></script>
-    
+    <script src="../assets/js/modalMain.js"></script>
   </body>
 </html>

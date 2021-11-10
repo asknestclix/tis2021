@@ -44,7 +44,7 @@
       href="../assets/images/others/cropped-faviconMi-32x32.png"
       type="image/svg"
     />
-
+    <script src='../assets/js/jquery.min.js'></script>
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="../assets/css/bs_ar/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/animate.css" />
@@ -90,7 +90,7 @@
                 <a href="http://onlineregistration.tischools.cc/" target="_blank" class="ud-main-btn ud-white-btn">
                   التسجيل
                 </a>
-                <a id="grades" class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+                <a id="grades" class="ud-main-btn ud-white-btn" href="#">
                   الدرجات
                 </a>
               </div>
@@ -102,7 +102,7 @@
     <!-- ====== Header End ====== -->
 
     <!-- ====== Banner Start ====== -->
-    <section class="ed1-page-banner Aligner">
+    <section id="home" class="ed1-page-banner Aligner">
       
       <div class="container">
         <div class="row">
@@ -294,6 +294,14 @@
 
       <div style="opacity:0.5; float:left;margin-top:-100px; width:250px; height:230px; background-image: url('../assets/images/others/dotted.png');"></div>
     </section>
+    <div class="modal2">
+      <div class="content">
+        <div class="close"></div>
+        <div id="content1">
+          <iframe src="http://gradesbucket.tischools.cc/newgrades.aspx" allowtransparency="true" style="height: 70vh; width:100%; border:none; background-color: transparent; overflow-x: hidden;"></iframe>
+        </div>
+      </div>
+    </div>
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
@@ -306,5 +314,6 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/mainsub.js"></script>
+    <script src="../assets/js/modalMain.js"></script>
   </body>
 </html>
