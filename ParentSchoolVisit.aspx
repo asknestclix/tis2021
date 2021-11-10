@@ -76,7 +76,7 @@
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBoxParentName" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
 
-                                    <div class="col-md-2 col-xs-3 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         رقم الجوال
                                       
                                     </div>
@@ -89,7 +89,7 @@
                                 </div>
 
 
-                                <div class="col-md-12 col-xs-3 pull-right" style="padding: 10px 5px;">
+                                <div class="col-md-12 col-xs-4 pull-right" style="padding: 10px 5px;">
                                     <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
                                         البريد الالكتروني
                                       
@@ -97,7 +97,7 @@
                                     <div class="col-md-3 col-xs-7 pull-right" style="padding: 10px 5px;">
                                         <asp:TextBox ID="TextBoxEmail" type="email" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="col-md-1 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-1 col-xs-1 pull-right" style="padding: 10px 5px;">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBoxEmail" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
 
