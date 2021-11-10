@@ -4,6 +4,7 @@ const showModalMain = () => {
 
     if ($('.modal').hasClass('open')) {
       $('#home').addClass('blur');
+      $('body').addClass('noScroll');
     }
 
 
