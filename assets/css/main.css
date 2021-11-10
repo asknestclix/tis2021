@@ -289,11 +289,11 @@ img.tt-logo {
   .modal2 .content {
     position: relative;
     padding:35px; padding-top: 50px;
-    width: 70%;
+    width: 60%;
     max-height: 80vh;
     overflow-y: scroll;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.7);
     -webkit-box-shadow: 2px 5px 16px -2px #000000; 
     box-shadow: 2px 5px 16px -2px #000000;
     box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;
