@@ -128,7 +128,7 @@
                                 </div>
 
                                 <div class="col-md-12 col-xs-12 pull-right" style="padding: 0 5px; margin: 0">
-                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 12px;">
                                         حجز موعد لما يلي 
                                     </div>
                                     <div class="col-md-9 col-xs-8 pull-right" style="padding: 10px 5px;font-size: 8pt;">
@@ -141,26 +141,26 @@
                                     </div>
 
                                     
-                                    <div class="col-md-2 col-xs-12 pull-right" style="padding: 0px 5px;">
+                                    <div class="col-md-2 col-xs-12 pull-right" style="padding: 0px 12px;">
                                         الموضوع 
                                     </div>
-                                    <div class="col-md-9 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-9 col-xs-11 pull-right" style="padding: 10px 5px;">
                                         <textarea id="txtDetails" runat="server" class="form-control"></textarea>
                                     </div>
                                     
                                 </div>
                                 <div class="col-md-12 col-xs-12 pull-right" style="padding: 0 0px; margin: 0">
-                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 12px;">
                                         التاريخ
                                     </div>
                                     <div class="col-md-3 col-xs-7 pull-right" style="padding: 10px 5px;">
                                         <asp:TextBox ID="TextBoxVisitDate" type="date" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="col-md-1 col-xs-12 pull-right" style="padding: 10px 5px;"></div>
-                                    <div class="col-md-2 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
                                         الوقت
                                     </div>
-                                    <div class="col-md-3 col-xs-12 pull-right" style="padding: 10px 5px;">
+                                    <div class="col-md-3 col-xs-7 pull-right" style="padding: 10px 5px;">
                                         <asp:DropDownList ID="DropDownListVisitTime1" CssClass="form-control" style="display:none" runat="server">
                                             <asp:ListItem Text="3:00" Value="21"></asp:ListItem>
                                             <asp:ListItem Text="3:15" Value="22"></asp:ListItem>
