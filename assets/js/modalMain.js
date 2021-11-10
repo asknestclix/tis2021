@@ -31,6 +31,7 @@ $('#grades').click(function () {
 
 $('.close').click(function () {
     $('.modal').removeClass('open');
+    $('.modal2').removeClass('open');
     $('#home').removeClass('blur');
 
     
