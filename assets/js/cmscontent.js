@@ -1,5 +1,9 @@
+var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}};
+
 let contentList = null;
 let contentSubCats = null;
+let contentPrograms = null;
+
 let apiURI = "http://167.172.52.246:1337";
 
 const loadAPI = (pageName) => {
@@ -9,12 +13,17 @@ const loadAPI = (pageName) => {
         $.getJSON( apiURI + "/home-page-sub-categories", function( data ) {
             contentSubCats = data;
         }).done(()=>{
-            switch (pageName) {
-                case "Home" : loadHomeContent(); break;
-                case "About" : loadAboutContent(); break;
-                case "EduStages" : loadEduStages(); break;
-            }
-            
+
+            $.getJSON( apiURI + "/enrichment-programs", function( data ) {
+                contentPrograms = data;
+                }).done(()=>{
+                    switch (pageName) {
+                        case "Home" : loadHomeContent(); break;
+                        case "About" : loadAboutContent(); break;
+                        case "EduStages" : loadEduStages(); break;
+                        case "Programs": loadPrograms(); break;
+                    }
+                });
         });
     });
     
@@ -30,6 +39,75 @@ function getSubCats(tag) {
         }
     });
     return obj;
+}
+$('.close').click(function () {
+    $('.modal').removeClass('open');
+    $('#home').removeClass('blur');
+    $('body').removeClass('noScroll');
+    
+});
+function updateProgramModel(el) {
+    $('.modal').addClass('open');
+    if ($('.modal').hasClass('open')) {
+        $('#home').addClass('blur');
+        $('body').addClass('noScroll');
+      }
+    $('#modalContent').removeClass('hideContent');
+    let cont = JSON.parse(Base64.decode(el))
+
+    if (cont.Image) {
+        $("#modalImage")[0].src = apiURI + cont.Image.url;
+        $("#modalImage")[0].style.display = "block";
+    } else {
+        $("#modalImage")[0].style.display = "none";
+    }
+    $("#modalTitle")[0].innerText=cont.Title;
+    
+    $('#modalContent').addClass('showContent');
+    
+    
+    if (cont.Tag === "Programs_Enrichment_Programs") {
+        const progTemplate = "<article class='beefup example-opensingle'>" +
+                             "<h5 id='subTitle___" + el.Tag + "' class='beefup__head' style='font-weight:100;'>{itemTitle}</h5>" +
+                             "<div class='beefup__body'>" +
+                             "<img src='{itemImage}' style='width:100px; float:right; margin-left:50px'/>" +
+                             "<p id='subDesc'>{progDesc}</p>" +
+                             "</div></article>";
+        let programItems = "";
+        contentPrograms.forEach(item => {
+            let itm = progTemplate.replace("{itemTitle}", item.Title).replace("{progDesc}", item.Description).replace("{itemImage}", apiURI + item.Image.url);
+            programItems += itm;
+        });
+
+        $("#modalDesc")[0].innerHTML=cont.LongDescription + "<br/><br/>" + programItems;
+        $('.example-opensingle').beefup({
+            openSingle: true
+        });
+    } else {
+        $("#modalDesc")[0].innerText=cont.LongDescription;
+    }
+    
+}
+function loadPrograms() {
+    const programs = getContent("Explore_Programs");
+    const programCats = getSubCats("Explore_Programs"); 
+
+    $("#programsTitle")[0].innerText=programs.title;
+    $("#programsSubHeading")[0].innerText=programs.SubHeading;
+    $("#programsDesc")[0].innerText=programs.Description;
+
+    let programLen = (100 / programCats.length) + "%";
+    const template = "<div {script} class='tabNav Aligner' style='width:" + programLen + "'>" +
+                     "<h4 class='Aligner-item'>{$}</h4>" +
+                     "</div>";
+    
+    let programTab = "";       
+              
+    programCats.forEach(el => {
+        programTab += template.replace("{$}", el.Title).replace("{script}", "onClick=updateProgramModel('" +  Base64.encode(JSON.stringify(el)) + "')");
+    });
+
+    $("#programList")[0].innerHTML = programTab;
 }
 function loadEduStages() {
     const eduStageBanner = getContent("Educational_Stages");
