@@ -99,6 +99,12 @@ function loadPrograms() {
     $("#programsDesc")[0].innerText=programs.Description;
 
     let programLen = (100 / programCats.length) + "%";
+    if (window.screen.width < 450) {
+        programLen = "100%; font-size:15pt; margin-bottom:1px; height:50px;padding:5px";
+    } else if (window.screen.width > 450 && window.screen.width < 1080) {
+        programLen = "33%; font-size:15pt; margin-bottom:1px; height:50px;padding:5px";
+
+    }
     const template = "<div {script} class='tabNav Aligner' style='width:" + programLen + "'>" +
                      "<h4 class='Aligner-item'>{$}</h4>" +
                      "</div>";
