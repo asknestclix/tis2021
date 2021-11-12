@@ -43,10 +43,87 @@ img.tt-logo {
 .gsideDiv img{
     width:100px; margin-bottom:25px;
 }
+
+
 @media screen and (max-width: 1190px) {
     .gsideDiv{
         margin-right: 115px;
     }
+}
+
+/*IPhone Portrait*/
+@media screen and (max-width: 428px) {
+  .ud-hero-image .cardGold.shape.shape-2 {
+    right:0;
+    top:0 !important;
+  }
+  .ud-hero-image .cardGreen.shape.shape-1{
+    left:0;
+    bottom:50px !important;
+  }
+  .mainFeature {
+    margin-top: 0 !important;
+  }
+  .ud-section-title{
+    max-width: 100%;
+  }
+  .gsideDiv {
+    width:100% !important;
+    margin-right:0 !important;
+  }
+  .gside {
+    display: none;
+  }
+  .gsideDiv img {
+    width:25%;
+  }
+  #adminMain {
+    display: none !important;
+  }
+  .contactUs {
+    background-image: none;
+  }
+  .copyright {
+    display: none;
+  }
+}
+
+/* IPhone Landscape */
+@media screen and (min-width:500px) and  (max-width: 926px) {
+  .ud-hero-image .cardGold.shape.shape-2 {
+    right:0;
+    top:-200px !important;
+  }
+  .ud-hero-image .cardGreen.shape.shape-1{
+    left:0;
+    bottom:200px;
+  }
+  #adminMain {
+    display: none !important;
+  }
+  .copyright {
+    display: none;
+  }
+}
+/* iPad Landscape */
+@media screen and (min-width:927px) and  (max-width: 1080px) {
+  .ud-hero-image .cardGold.shape.shape-2 {
+    right:0;
+    top:-200px !important;
+  }
+  .ud-hero-image .cardGreen.shape.shape-1{
+    left:0;
+    bottom:200px;
+  }
+}
+.copyright {
+  margin-bottom:25px; font-size:13px; margin-top:100px;
+}
+.contactUs {
+  background-image:url('assets/images/others/arrow.svg'); background-repeat:no-repeat; background-position:top right; min-height: 100px; width:100%;
+}
+.mainFeature {
+  margin-top: 200px;
 }
 
 .shadowy
