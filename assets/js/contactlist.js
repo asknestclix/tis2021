@@ -83,7 +83,6 @@ activities.addEventListener("change", function(e) {
     let innerHtm = "";
     if(e.target.value) {
         data.forEach( (el,index) => {
-            debugger;
             if (el.departmentName === e.target.value) {
                 let element = document.getElementById("contents");
                 element.style.display="block";
