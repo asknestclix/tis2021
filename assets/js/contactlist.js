@@ -3,6 +3,7 @@ let contactList = null;
 let data = null;
 
 const loadAPI = () => {
+    $('body').toggleClass('loading');
     $.getJSON( "http://167.172.52.246:1337/contact-lists", function( data ) {
         departmentList = data;
     }).done(()=>{
@@ -11,6 +12,7 @@ const loadAPI = () => {
         }).done(()=>{
             contructData(departmentList, contactList);
             populateSelect();
+            $('body').toggleClass('loading');
         });
     });
     

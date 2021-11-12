@@ -39,6 +39,7 @@ function InitializeCalendar(calID) {
 
     var PlaceID = calID ? calID : "0";
     let calData = undefined;
+    $('body').toggleClass('loading');
 
     $.ajax({
 
@@ -49,7 +50,7 @@ function InitializeCalendar(calID) {
         dataType: "json",
         success: function (data) {
 
-            
+            $('body').toggleClass('loading');
             let op = data.d;
             document.getElementById("calendarContainer").innerHTML = "";
             if (op && op.length > 0) {

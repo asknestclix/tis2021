@@ -7,6 +7,7 @@ let contentPrograms = null;
 let apiURI = "http://167.172.52.246:1337";
 
 const loadAPI = (pageName) => {
+    $('body').toggleClass('loading');
     $.getJSON( apiURI+ "/home-page-contents", function( data ) {
         contentList = data;
     }).done(()=>{
@@ -23,6 +24,7 @@ const loadAPI = (pageName) => {
                         case "EduStages" : loadEduStages(); break;
                         case "Programs": loadPrograms(); break;
                     }
+                    $('body').toggleClass('loading');
                 });
         });
     });
