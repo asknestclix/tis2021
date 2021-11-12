@@ -12,6 +12,7 @@ const loadAPI = (pageName) => {
             switch (pageName) {
                 case "Home" : loadHomeContent(); break;
                 case "About" : loadAboutContent(); break;
+                case "EduStages" : loadEduStages(); break;
             }
             
         });
@@ -30,7 +31,36 @@ function getSubCats(tag) {
     });
     return obj;
 }
+function loadEduStages() {
+    const eduStageBanner = getContent("Educational_Stages");
+    const kinder = getContent("Educational_Stages_Kindergarten");
+    const elem = getContent("Educational_Stages_Elementary");
+    const others = getContent("Educational_Stages_Others");
 
+    $("#eduStageTitle")[0].innerText=eduStageBanner.title;
+    $("#eduStageSubHeading")[0].innerText=eduStageBanner.SubHeading;
+    $("#eduStageDesc")[0].innerText=eduStageBanner.Description;
+
+    $("#kinderTitle")[0].innerText=kinder.title;
+    $("#kinderDesc")[0].innerText=kinder.Description;
+
+    $("#elemTitle")[0].innerText=elem.title;
+    $("#elemDesc")[0].innerHTML=elem.SubHeading + "<h4 style='font-weight:100; margin-top:25px'>قسم الابتدائي </h4>" ;
+
+    let objContent = "<ul>";
+    let aboutObjectiveList = elem.Description.split('\n-');
+    aboutObjectiveList.forEach((el) => {
+        if (el) {
+            objContent+="<li>" + el + "</li>";
+        }
+    });
+    objContent+="</ul>";
+
+    $("#elemList")[0].innerHTML = objContent;
+
+    $("#eduOthersTitle")[0].innerText=others.title;
+    $("#eduOthersDesc")[0].innerText=others.Description;
+}
 function loadAboutContent() {
     const aboutContent = getContent("About_Vision");
     const aboutMessage = getContent("About_Message");
@@ -74,7 +104,7 @@ function loadAboutContent() {
     });
     objContent+="</ul>";
     $("#choosingList")[0].innerHTML=objContent;
-    
+
 }
 function loadHomeContent () {
    const aboutContent = getContent("home_about_us");
