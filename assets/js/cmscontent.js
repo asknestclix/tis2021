@@ -11,6 +11,7 @@ const loadAPI = (pageName) => {
         }).done(()=>{
             switch (pageName) {
                 case "Home" : loadHomeContent(); break;
+                case "About" : loadAboutContent(); break;
             }
             
         });
@@ -28,6 +29,52 @@ function getSubCats(tag) {
         }
     });
     return obj;
+}
+
+function loadAboutContent() {
+    const aboutContent = getContent("About_Vision");
+    const aboutMessage = getContent("About_Message");
+    const aboutHistory = getContent("About_School_History");
+    const aboutObjectives = getContent("About_General_Objectives");
+    const aboutChoosing = getContent("About_Choosing_Body");
+    
+    $("#aboutMainTitle")[0].innerText=aboutContent.title;
+    $("#aboutMainSubHeading")[0].innerText=aboutContent.SubHeading;
+    $("#aboutMainDesc")[0].innerText=aboutContent.Description;
+
+    $("#aboutMainMessageTitle")[0].innerText=aboutMessage.title;
+    $("#aboutMainMessageSubHeading")[0].innerText=aboutMessage.SubHeading;
+
+    $("#aboutHistoryTitle")[0].innerText=aboutHistory.title;
+    $("#aboutHistoryDesc")[0].innerText=aboutHistory.Description;
+
+    $("#aboutGeneralObjectivesTitle")[0].innerText=aboutObjectives.title;
+    $("#aboutGeneralObjectiveSubHeading")[0].innerText=aboutObjectives.SubHeading;
+    
+
+    let objContent = "<ul>";
+    let aboutObjectiveList = aboutObjectives.Description.split('\n-');
+    aboutObjectiveList.forEach((el) => {
+        if (el) {
+            objContent+="<li>" + el + "</li>";
+        }
+    });
+    objContent+="</ul>";
+    $("#aboutGeneralObjectiveList")[0].innerHTML=objContent;
+
+    $("#choosingTitle")[0].innerText=aboutChoosing.title;
+    $("#choosingSubHeader")[0].innerText=aboutChoosing.SubHeading;
+
+    objContent = "<ul>";
+    aboutObjectiveList = aboutChoosing.Description.split('\n-');
+    aboutObjectiveList.forEach((el) => {
+        if (el) {
+            objContent+="<li>" + el + "</li>";
+        }
+    });
+    objContent+="</ul>";
+    $("#choosingList")[0].innerHTML=objContent;
+    
 }
 function loadHomeContent () {
    const aboutContent = getContent("home_about_us");
@@ -88,6 +135,4 @@ function loadHomeContent () {
    $("#homeAdminName4")[0].innerText = homeAdminCats[2].Title;
    $("#homeAdminTitle4")[0].innerText=homeAdminCats[2].Description;
 }
-
-//window.onload = loadAPI("Home");
 
