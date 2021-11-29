@@ -57,6 +57,32 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
   </head>
   <body>
+    <div id="sideDrawerContainer">
+      <div id="sideDrawer">
+        <img src="../assets/images/logo/logo.png" alt="Logo" />
+        <div id="navContents" style="margin-top: 25px; color:white">
+        </div>
+
+        <div class="wow fadeInLeft" data-wow-delay='1.4s' style="margin-top: 25px; margin-right:10px; color:white">
+          <h5 style="text-align: right; color:white; font-size:12pt;color:white; font-weight:100">
+            ابقى على تواصل
+          </h5>
+          <p style="margin-top:15px; text-align: right;color:white; font-size:8pt" id="addy2">6530 القمراء، الرحمانية، الرياض 12342 المملكة العربية السعودية</p>
+          <p style="margin-top:10px; text-align: right;color:white; font-size:8pt">00966-1-14883818</p>
+          <a style="font-size:8pt; margin-right:0" href="mailto:info@tischools.edu.sa">info@tischools.edu.sa</a>
+        </div>
+
+        <div class="wow fadeInLeft" data-wow-delay='1.5s' style="margin-right:10px; margin-top:25px; font-size:13px; width:90%; background:url('../assets/images/others/ico_fb.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat;">
+          <a style="color:white; margin-right: 25px; margin-top: 0;" href="https://www.facebook.com/TISKSA" target="_blank">facebook.com/TISKSA</a>
+        </div>
+        <div class="wow fadeInLeft" data-wow-delay='1.6s' style="margin-right:10px; margin-top:10px; font-size:13px; width:90%; background:url('../assets/images/others/ico_linkedin.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat;">
+          <a style="color:white; margin-right: 25px; margin-top: 0;">linkedin.com/tis_schools</a>
+        </div>
+        <div class="wow fadeInLeft" data-wow-delay='1.7s' style="margin-right:10px; margin-top:10px; font-size:13px; width:90%; background:url('../assets/images/others/ico_youtube.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat;">
+          <a style="color:white; margin-right: 25px; margin-top: 0;" href="https://www.youtube.com/channel/UCA5Tv5F3OCVTWLozYvl87_A/featured" target="_blank">youtube.com/tis_schools</a>
+        </div>
+      </div>
+    </div>
     <div class="waitModal"></div>
     <div class="cont">
     <!-- ====== Header Start ====== -->
@@ -68,12 +94,7 @@
               <a class="navbar-brand" href="../index.html">
                 <img src="../assets/images/logo/logo.png" alt="Logo" />
               </a>
-              <button class="navbar-toggler">
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-              </button>
-
+              
               <div class="navbar-collapse">
                 <ul id="nav" class="navbar-nav mx-auto" ssty>
                   <li class="nav-item">
@@ -99,6 +120,11 @@
                 <a id="grades" class="ud-main-btn ud-white-btn" href="#">
                   الدرجات
                 </a>
+              </div>
+              <div id="sideDrawerTogger" class="ud-main-btn ud-white-btn sideDrawer-toggler">
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
               </div>
             </nav>
           </div>
@@ -151,7 +177,8 @@
                 <div class="col-lg-1 col-md-1"></div>
                 <div class="col-lg-4 col-md-5">
                   <div style="color:black;margin-bottom:25px; font-size:13px; width:100%; background:url('assets/images/others/ico_location.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat; padding-right: 50px;">
-                    6530 القمراء، الرحمانية، الرياض 12342 المملكة العربية السعودية
+                    <a id="addy" style="color:black" href="#">6530 القمراء، الرحمانية، الرياض 12342 المملكة العربية السعودية
+                    </a>
                   </div>
 
                   <div style="color:black;margin-bottom:25px; font-size:13px; width:100%; background:url('assets/images/others/ico_phone.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat; padding-right: 50px;">
@@ -240,6 +267,14 @@
         </div>
       </div>
     </div>
+    <div class="modal3">
+      <div class="content">
+        <div class="close"></div>
+        <div id="content1">
+          <iframe src="https://maps.google.com/maps?q=6530%20Al%20Qamra,%20Ar%20Rahmaniyyah,%20Riyadh%2012342,%20Saudi%20Arabia&t=&z=13&ie=UTF8&iwloc=&output=embed" allowtransparency="false" style="height: 70vh; width:100%; border:none; background-color: white; overflow-x: hidden;"></iframe>
+        </div>
+      </div>
+    </div>
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
@@ -255,6 +290,7 @@
     <script src="../assets/js/jquery.beefup.min.js"></script>
     <script src="../assets/js/modalMain.js"></script>
     <script src="../assets/js/cmscontent.js"></script>
+    <script src="../assets/js/sideDrawer2.js"></script>
     <script>
       loadAPI("Programs");
 

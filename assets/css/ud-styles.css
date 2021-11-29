@@ -286,7 +286,7 @@ p {
     position: absolute;
     top: 100%;
     right: 0;
-    max-width: 300px;
+    max-width: 100%;
     width: 100%;
     background-color: var(--white);
     z-index: 9;
@@ -298,6 +298,7 @@ p {
   }
   .navbar-collapse.show {
     display: block;
+    text-align: center;
   }
 }
 
