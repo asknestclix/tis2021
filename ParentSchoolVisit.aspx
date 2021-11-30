@@ -207,11 +207,13 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                     <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 5px;">
-                                     </div>
-                                     <div class="col-lg-9 col-md-10 col-xs-7 pull-right" style="padding: 10px 5px;">
-                                        <asp:Button ID="ButtonSave"  runat="server" CssClass="btn btn-success btn-lg pull-left" Text="حفظ " Style="margin-left:10px; min-width: 150px;" OnClick="ButtonSave_Click" />
+                                    <div class="col-md-2 col-xs-4 pull-right" style="padding: 10px 12px;">
+                                        
                                     </div>
+                                    <div class="col-md-3 col-xs-7 pull-right" style="padding: 10px 5px;">
+                                        <asp:Button ID="ButtonSave"  runat="server" CssClass="btn btn-success btn-lg" Text="حفظ " Style="margin-left:10px; min-width: 150px;" OnClick="ButtonSave_Click" />
+                                    </div>
+
                                     
                                 </div>
                             </div>
