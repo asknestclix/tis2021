@@ -74,6 +74,12 @@ $('#onlineReg').click(function () {
   showModal4();
   
 });
+$('#onlineRegSC').click(function () {
+  debugger;
+  showModal4();
+  
+});
+
 $('.close').click(function () {
     $('.modal').removeClass('open');
     $('.modal2').removeClass('open');
