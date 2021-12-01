@@ -244,11 +244,13 @@ function loadHomeContent () {
    $("#homeAdminSubImage2")[0].src = apiURI + homeAdminCats[1].Image.url;
    $("#homeAdminName2")[0].innerText = homeAdminCats[1].Title;
    $("#homeAdminTitle2")[0].innerText=homeAdminCats[1].Description;
+   /*
    $("#homeAdminSubImage3")[0].src = apiURI + homeAdminCats[2].Image.url;
    $("#homeAdminName3")[0].innerText = homeAdminCats[2].Title;
    $("#homeAdminTitle3")[0].innerText=homeAdminCats[2].Description;
    $("#homeAdminSubImage4")[0].src = apiURI + homeAdminCats[2].Image.url;
    $("#homeAdminName4")[0].innerText = homeAdminCats[2].Title;
    $("#homeAdminTitle4")[0].innerText=homeAdminCats[2].Description;
+   */
 }
 
