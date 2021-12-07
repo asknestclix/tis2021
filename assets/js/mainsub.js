@@ -42,10 +42,13 @@
       navbarCollapse.classList.remove("show");
     })
   );
-  navbarToggler.addEventListener("click", function () {
-    navbarToggler.classList.toggle("active");
-    navbarCollapse.classList.toggle("show");
-  });
+  if (navbarToggler) {
+    navbarToggler.addEventListener("click", function () {
+      navbarToggler.classList.toggle("active");
+      navbarCollapse.classList.toggle("show");
+    });
+  }
+  
 
   // ===== submenu
   const submenuButton = document.querySelectorAll(".nav-item-has-children");
