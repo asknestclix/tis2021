@@ -513,7 +513,7 @@ p {
 
 /* ===== Hero CSS ===== */
 .ud-hero {
-  background: var(--primary-color);
+  background: white;
   padding-top: 180px;
 }
 
