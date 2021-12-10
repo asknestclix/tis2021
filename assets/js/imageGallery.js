@@ -1,5 +1,6 @@
 let imageList = null;
 
+
 const loadImageAPI = () => {
     /*
     $.ajax(
@@ -21,6 +22,26 @@ const loadImageAPI = () => {
         imageList = data;
     }).done(()=>{
         createImageList();
+        const list = document.querySelector(".gridz");
+        const listItems = list.querySelectorAll("li");
+        const ajaxLoadMoreBtn = document.querySelector(".ajax-load-more");
+        
+        let k = 6;
+        let j = 10;
+        
+        ajaxLoadMoreBtn.addEventListener("click", function () {
+        let range = `li:nth-child(n+${k}):nth-child(-n+${j})`;
+        list
+            .querySelectorAll(range)
+            .forEach((elem) => (elem.style.display = "block"));
+        
+        if (listItems.length <= j) {
+            this.remove();
+        } else {
+            k += 5;
+            j += 5;
+        }
+        });
     }).fail(function(jqXHR, textStatus, errorThrown) {
         console.error(textStatus);
     });
@@ -30,10 +51,14 @@ const loadImageAPI = () => {
 
 const generateTemplate = (thumbnail, title, desc, sec, galleryMacro) => {
     if (thumbnail != undefined) {
-        return "<div class='col-lg-3 col-md-3 col-md-4 col-xs-12 wow fadeInRight' data-wow-delay='" + sec + "'>" +
+        /*
+        return "<div class='col-lg-3 col-md-4 col-xs-12 wow fadeInRight' data-wow-delay='" + sec + "'>" +
         "<div class='imageItem' style='background:url(https://tis-cms.com" + thumbnail + ")'>" +
         "<div style='position:absolute; height:70px; width:90%;top:30px;background:rgba(255,255,255,0.8) center center no-repeat; background-size:cover; padding:15px'>" +
         "<h6>" + title  + "</h6></div></div></div>";
+        */
+        return "<li style='background-image:url(https://tis-cms.com" + thumbnail + ")'><div><h4>" + title + "</h4></div></li>";
+        //return '<li style="background-image: url(https://tis-cms.com"' + thumbnail + ')"></li>';
     } else {
         return "";
     }
@@ -42,13 +67,12 @@ const generateTemplate = (thumbnail, title, desc, sec, galleryMacro) => {
 }
 
 const createImageList = () => {
-    debugger;
-    let itemList = "";
+    let itemList = "<ul class='gridz'>";
     imageList.forEach((el,index) => {
        let sec = index/10;
        itemList += generateTemplate(el.thumbnail.url, el.GalleryTitle ? el.GalleryTitle : "", el.Description ? el.description :"", el.sec,el.gallery_list);
     });
-    debugger;
+    itemList += "</ul>";
     document.getElementById("galleryContainer").innerHTML = itemList;
 }
 
