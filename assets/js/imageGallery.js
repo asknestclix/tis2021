@@ -17,7 +17,7 @@ const loadImageAPI = () => {
     )
     */
     
-    $.getJSON( "http://167.172.52.246:1337/galleries", function( data ) {
+    $.getJSON( "https://tis-cms.com/galleries", function( data ) {
         imageList = data;
     }).done(()=>{
         createImageList();
@@ -31,7 +31,7 @@ const loadImageAPI = () => {
 const generateTemplate = (thumbnail, title, desc, sec, galleryMacro) => {
     if (thumbnail != undefined) {
         return "<div class='col-lg-3 col-md-3 col-md-4 col-xs-12 wow fadeInRight' data-wow-delay='" + sec + "'>" +
-        "<div class='imageItem' style='background:url(http://167.172.52.246:1337" + thumbnail + ")'>" +
+        "<div class='imageItem' style='background:url(https://tis-cms.com" + thumbnail + ")'>" +
         "<div style='position:absolute; height:70px; width:90%;top:30px;background:rgba(255,255,255,0.8) center center no-repeat; background-size:cover; padding:15px'>" +
         "<h6>" + title  + "</h6></div></div></div>";
     } else {

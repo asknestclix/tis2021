@@ -1,7 +1,7 @@
 let videoList = null;
 
 const loadAPI = () => {
-    $.getJSON( "http://167.172.52.246:1337/help-video-lists", function( data ) {
+    $.getJSON( "https://tis-cms.com/help-video-lists", function( data ) {
         videoList = data;
     }).done(()=>{
         loadVideoItems();

@@ -4,7 +4,7 @@ let contentList = null;
 let contentSubCats = null;
 let contentPrograms = null;
 
-let apiURI = "http://167.172.52.246:1337";
+let apiURI = "https://tis-cms.com";
 
 const loadAPI = (pageName) => {
     $('body').toggleClass('loading');

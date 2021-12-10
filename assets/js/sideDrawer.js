@@ -2,7 +2,7 @@ let navList = null;
 
 const loadNavAPI = () => {
     $('body').toggleClass('loading');
-    $.getJSON( "http://167.172.52.246:1337/navigations", function( data ) {
+    $.getJSON( "https://tis-cms.com/navigations", function( data ) {
         navList = data;
         data.sort(compare);
 

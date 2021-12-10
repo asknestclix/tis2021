@@ -4,10 +4,10 @@ let data = null;
 
 const loadAPI = () => {
     $('body').toggleClass('loading');
-    $.getJSON( "http://167.172.52.246:1337/contact-lists", function( data ) {
+    $.getJSON( "https://tis-cms.com/contact-lists", function( data ) {
         departmentList = data;
     }).done(()=>{
-        $.getJSON( "http://167.172.52.246:1337/dpartment-contact-lists", function( data ) {
+        $.getJSON( "https://tis-cms.com/dpartment-contact-lists", function( data ) {
             contactList = data;
         }).done(()=>{
             contructData(departmentList, contactList);
