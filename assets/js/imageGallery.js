@@ -57,7 +57,8 @@ const generateTemplate = (thumbnail, title, desc, sec, galleryMacro) => {
         "<div style='position:absolute; height:70px; width:90%;top:30px;background:rgba(255,255,255,0.8) center center no-repeat; background-size:cover; padding:15px'>" +
         "<h6>" + title  + "</h6></div></div></div>";
         */
-        return "<li style='background-image:url(https://tis-cms.com" + thumbnail + ")'><div><h4>" + title + "</h4></div></li>";
+       
+        return "<li style='background-image:url(https://tis-cms.com" + thumbnail + ")'><a href='#' onClick='showGallery(" + JSON.stringify(galleryMacro) + ");'><div><h4>" + title + "</h4></div></a></li>";
         //return '<li style="background-image: url(https://tis-cms.com"' + thumbnail + ')"></li>';
     } else {
         return "";
@@ -66,6 +67,20 @@ const generateTemplate = (thumbnail, title, desc, sec, galleryMacro) => {
     
 }
 
+const showGallery =(macro) => {
+    
+    document.getElementById('galleryFrame').src = "../gallery.html?id=";
+    
+    $('.modal5').addClass('open');
+  
+    if ($('.modal5').hasClass('open')) {
+      $('#home').addClass('blur');
+      $('#cont').addClass('blur');
+      $('.cont2').addClass('blur');
+      $('body').addClass('noScroll');
+      
+    }
+}
 const createImageList = () => {
     let itemList = "<ul class='gridz'>";
     imageList.forEach((el,index) => {
@@ -74,6 +89,7 @@ const createImageList = () => {
     });
     itemList += "</ul>";
     document.getElementById("galleryContainer").innerHTML = itemList;
+    console.error(imageList);
 }
 
 const showModal = (idx) => {

@@ -90,6 +90,7 @@ $('.close').click(function () {
     $('.modal2').removeClass('open');
     $('.modal3').removeClass('open');
     $('.modal4').removeClass('open');
+    $('.modal5').removeClass('open');
     $('#home').removeClass('blur');
     $('#cont').removeClass('blur');
     $('.cont2').removeClass('blur');
