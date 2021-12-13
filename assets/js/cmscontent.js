@@ -251,8 +251,9 @@ function loadHomeContent () {
    $("#homeAdminSubImage1")[0].src = apiURI + homeAdminCats[0].Image.url;
    $("#homeAdminName1")[0].innerText = homeAdminCats[0].Title;
    $("#homeAdminTitle1")[0].innerText=homeAdminCats[0].Description;
-   $("#homeAdminEmail1")[0].innerText=homeAdminCats[0].Email;
    
+   $("#homeAdminEmail1")[0].href = "mailto:" + homeAdminCats[0].Email;
+   $("#homeAdminOtherLink1")[0].href=homeAdminCats[0].OtherLinks;
 
    $("#homeAdminSubImage2")[0].src = apiURI + homeAdminCats[1].Image.url;
    $("#homeAdminName2")[0].innerText = homeAdminCats[1].Title;
