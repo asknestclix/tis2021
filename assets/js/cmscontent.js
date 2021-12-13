@@ -153,7 +153,8 @@ function loadAboutContent() {
     const aboutHistory = getContent("About_School_History");
     const aboutObjectives = getContent("About_General_Objectives");
     const aboutChoosing = getContent("About_Choosing_Body");
-    
+    const aboutGeneral = getContent('About_Message_Director_General_AR');
+
     $("#aboutMainTitle")[0].innerText=aboutContent.title;
     $("#aboutMainSubHeading")[0].innerText=aboutContent.SubHeading;
     $("#aboutMainDesc")[0].innerText=aboutContent.Description;
@@ -167,7 +168,8 @@ function loadAboutContent() {
     $("#aboutGeneralObjectivesTitle")[0].innerText=aboutObjectives.title;
     $("#aboutGeneralObjectiveSubHeading")[0].innerText=aboutObjectives.SubHeading;
     
-
+    $("#contentGeneralTitle")[0].innerText = aboutGeneral.title;
+    $("#contentGeneral")[0].innerText = aboutGeneral.Description;
     let objContent = "<ul>";
     let aboutObjectiveList = aboutObjectives.Description.split('\n-');
     aboutObjectiveList.forEach((el) => {
@@ -219,6 +221,8 @@ function loadHomeContent () {
    $("#enrichProgTitle")[0].innerText=enrichmentProgram.title;
    $("#enrichProgSubTitle")[0].innerText=enrichmentProgram.SubHeading;
    $("#enrichDesc")[0].innerText=enrichmentProgram.Description;
+   $("#enrichImage")[0].src=apiURI + enrichmentProgram.Image.url;
+   
 
    $("#edStageTitle")[0].innerText=educationalJourney.title;
    $("#edStageSubHeading")[0].innerText=educationalJourney.SubHeading;
@@ -234,6 +238,12 @@ function loadHomeContent () {
    $("#journeyTitle3")[0].innerText = regEdJourney[2].Title;
    $("#journeyDesc3")[0].innerText=regEdJourney[2].Description;
    
+   $("#journeyTitle4")[0].innerText = regEdJourney[3].Title;
+   $("#journeyDesc4")[0].innerText=regEdJourney[3].Description;
+
+   $("#journeyTitle5")[0].innerText = regEdJourney[4].Title;
+   $("#journeyDesc5")[0].innerText=regEdJourney[4].Description;
+
    $("#homeAdminTitle")[0].innerText=homeAdmin.title;
    $("#homeAdminSubHeading")[0].innerText=homeAdmin.SubHeading;
    $("#homeAdminDesc")[0].innerText=homeAdmin.Description;
@@ -241,9 +251,13 @@ function loadHomeContent () {
    $("#homeAdminSubImage1")[0].src = apiURI + homeAdminCats[0].Image.url;
    $("#homeAdminName1")[0].innerText = homeAdminCats[0].Title;
    $("#homeAdminTitle1")[0].innerText=homeAdminCats[0].Description;
+   $("#homeAdminEmail1")[0].innerText=homeAdminCats[0].Email;
+   
+
    $("#homeAdminSubImage2")[0].src = apiURI + homeAdminCats[1].Image.url;
    $("#homeAdminName2")[0].innerText = homeAdminCats[1].Title;
    $("#homeAdminTitle2")[0].innerText=homeAdminCats[1].Description;
+   $("#homeAdminEmail2")[0].innerText=homeAdminCats[0].Email;
    /*
    $("#homeAdminSubImage3")[0].src = apiURI + homeAdminCats[2].Image.url;
    $("#homeAdminName3")[0].innerText = homeAdminCats[2].Title;

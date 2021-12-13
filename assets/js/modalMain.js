@@ -50,6 +50,18 @@ const showModal4 = () => {
   }
 }
 
+const showModalGeneral = () => {
+  
+  $('.modalGeneral').addClass('open');
+
+  if ($('.modalGeneral').hasClass('open')) {
+    $('#home').addClass('blur');
+    $('#cont').addClass('blur');
+    $('.cont2').addClass('blur');
+    $('body').addClass('noScroll');
+  }
+}
+
 $('#q1').click(function () {
     
   showModalMain();
@@ -84,6 +96,10 @@ $('#onlineRegSC').click(function () {
   showModal4();
   
 });
+$('#messageGeneral').click(function () {
+  showModalGeneral();
+});
+
 
 $('.close').click(function () {
     $('.modal').removeClass('open');
@@ -91,6 +107,7 @@ $('.close').click(function () {
     $('.modal3').removeClass('open');
     $('.modal4').removeClass('open');
     $('.modal5').removeClass('open');
+    $('.modalGeneral').removeClass('open');
     $('#home').removeClass('blur');
     $('#cont').removeClass('blur');
     $('.cont2').removeClass('blur');

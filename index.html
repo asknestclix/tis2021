@@ -122,10 +122,11 @@
                 <a id="onlineReg" href="#" class="ud-main-btn ud-white-btn">
                   التسجيل
                 </a>
+                <!--
                 <a id="grades" class="ud-main-btn ud-white-btn" href="#">
                   الدرجات
                 </a>
-                
+                -->
               </div>
               
               <div id="sideDrawerTogger" class="ud-main-btn ud-white-btn sideDrawer-toggler">
@@ -182,6 +183,8 @@
             <img src="assets/images/others/sp1.svg" class="tt-logo"/>
             <img src="assets/images/others/sp2.svg" class="tt-logo"/>
             <img src="assets/images/others/sp3.svg" class="tt-logo"/>
+            <img src="assets/images/others/flip genius-01.png" class="tt-logo"/>
+            <img src="assets/images/others/حياة محمدية-01.png" class="tt-logo"/>
           </div>
         </div>
       </div>
@@ -278,43 +281,17 @@
     <!-- ====== Enrichment Programs ====== -->
     <section id="enrichmentProgram" class="ud-about" style="margin-top:-230px; padding-top:200px;">
       <div class="container">
-        <div class="row" style="display: block;">
-          <div class="col-lg-7 col-md-9 col-xs-12" style="text-align: right;">
+        <div class="row" style="vertical-align: middle; margin-bottom: 100px;">
+          <div class="col-lg-7 col-md-7 col-xs-12" style="text-align: right;">
             <div class="ud-section-title wow fadeInUp">
               <span id="enrichProgTitle"></span>
               <h4 id="enrichProgSubTitle"style="margin-top:5px; margin-bottom: 25px;"></h4>
               <div id="enrichDesc"></div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          
-          <div class="col-lg-11 col-md-11 col-xs-12 wow fadeInUp" data-wow-delay=".2s"" style="min-height: 500px; ">
-             <img src="assets/images/others/gside.png" class="gside"/>
-             <div class="gsideDiv shadowy">
-               <img src="assets/images/others/c1.png"/>
-               <img src="assets/images/others/c2.png"/>
-               <img src="assets/images/others/c3.png"/>
-               <img src="assets/images/others/c4.png"/>
-               <img src="assets/images/others/c5.png"/>
-               <img src="assets/images/others/c6.png"/>
-               <img src="assets/images/others/c7.png"/>
-               <img src="assets/images/others/c8.png"/>
-               <img src="assets/images/others/c9.png"/>
-               <img src="assets/images/others/c10.png"/>
-               <img src="assets/images/others/c11.png"/>
-               <img src="assets/images/others/c12.png"/>
-               <img src="assets/images/others/c13.png"/>
-               <img src="assets/images/others/c14.png"/>
-               <img src="assets/images/others/c15.png"/>
-               <img src="assets/images/others/c16.png"/>
-               <img src="assets/images/others/c17.png"/>
-               <img src="assets/images/others/c18.png"/>
-               <img src="assets/images/others/c19.png"/>
-             </div>
-            
+          <div class="col-lg-5 col-md-5 col-xs-12 wow fadeInLeft" data-wow-delay=".55s" style="text-align: center;">
+            <img id="enrichImage" />
           </div>
-          <div class="col-lg-1 col-md-1"></div>
         </div>
         
       </div>
@@ -326,7 +303,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-5 col-sm-12 col-md-5" style="text-align: right;">
-            <div class="ud-section-title wow fadeInUp" style="padding-top: 50px;">
+            <div class="ud-section-title wow fadeInRight" data-wow-delay=".25s" style="padding-top: 50px;">
               <span id="edStageTitle"></span>
               <h4 id="edStageSubHeading"></h4>
               <div id="edStageDesc" style="margin-top: 20px; text-align: right"></div>
@@ -374,7 +351,34 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-6 col-md-6" style="margin-top: 13px;">
+            <div
+              class="ud-single-testimonial wow fadeInUp shadowy"
+              data-wow-delay=".15s" style="min-height: 200px;">
+              <!--<div style="text-align: center; padding-bottom: 15px;">
+                  <img id="journeyImage3" style="height:50px;filter: grayscale(100%);"/>
+              </div>-->
+              <h4 id="journeyTitle4" style="text-align: right; font-weight: 100;color:#429B42"></h4>
+              <div class="ud-testimonial-content" style="text-align: right; margin-top:20px">
+                <p id="journeyDesc4"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6" style="margin-top: 13px;">
+            <div
+              class="ud-single-testimonial wow fadeInUp shadowy"
+              data-wow-delay=".15s" style="min-height: 200px;">
+              <!--<div style="text-align: center; padding-bottom: 15px;">
+                  <img id="journeyImage3" style="height:50px;filter: grayscale(100%);"/>
+              </div>-->
+              <h4 id="journeyTitle5" style="text-align: right; font-weight: 100;color:#429B42"></h4>
+              <div class="ud-testimonial-content" style="text-align: right; margin-top:20px">
+                <p id="journeyDesc5"></p>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <div style="float:left;margin-left: 50px; margin-top:-150px; width:150px; height:180px; background-image: url('assets/images/others/dotted.png');"></div>
         <div style="float:right;margin-right: -50px; margin-top:-450px; width:150px; height:180px; background-image: url('assets/images/others/dotted.png');"></div>
         
@@ -416,24 +420,10 @@
               <div class="ud-team-info" >
                 <h5 id="homeAdminName1" style="color:white"></h5>
                 <h6 id="homeAdminTitle1" style="color:white"></h6>
+                <h6 id="homeAdminEmail1" style="color:white; margin-top: 10px"></h6>
+                <h6 id="homeAdminOtherLink1" style="color:white; margin-top: 10px"></h6>
               </div>
-              <ul class="ud-team-socials">
-                <li>
-                  <a href="#">
-                    <i class="lni lni-facebook-filled" style="color:white"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="lni lni-twitter-filled" style="color:white"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="lni lni-instagram-filled" style="color:white"></i>
-                  </a>
-                </li>
-              </ul>
+              
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-sm-6" style="display:none">
@@ -453,6 +443,8 @@
               <div class="ud-team-info">
                 <h5 id="homeAdminName2" style="color:white"></h5>
                 <h6 id="homeAdminTitle2" style="color:white"></h6>
+                <h6 id="homeAdminEmail2" style="color:white; margin-top: 10px;"></h6>
+                <h6 id="homeAdminOtherLink2" style="color:white; margin-top: 10px"></h6>
               </div>
               <ul class="ud-team-socials">
                 <li>
@@ -594,23 +586,23 @@
                   </div>
                 </div>
                 
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-2 col-md-2">
                   <div style="border-right: 1px solid gainsboro; padding-right: 25px; min-height: 130px;">
                     <div style="margin-bottom:25px; font-size:13px; width:100%; background:url('assets/images/others/ico_fb.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat; padding-right: 50px;">
-                      <a style="color:black" href="https://www.facebook.com/TISKSA" target="_blank">facebook.com/TISKSA</a>
+                      <a style="color:black" href="https://www.facebook.com/TISKSA" target="_blank">facebook</a>
                     </div>
 
                     <div style="margin-bottom:25px; font-size:13px; width:100%; background:url('assets/images/others/ico_linkedin.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat; padding-right: 50px;">
-                      <a style="color:black" >linkedin.com/tis_schools</a>
+                      <a style="color:black" >linkedin</a>
                     </div>
 
                     <div style="margin-bottom:25px; font-size:13px; width:100%; background:url('assets/images/others/ico_youtube.svg'); background-size:18px; background-position:right center; background-repeat:no-repeat; padding-right: 50px;">
-                      <a style="color:black" href="https://www.youtube.com/channel/UCA5Tv5F3OCVTWLozYvl87_A/featured" target="_blank">youtube.com/tis_schools</a>
+                      <a style="color:black" href="https://www.youtube.com/channel/UCA5Tv5F3OCVTWLozYvl87_A/featured" target="_blank">youtube</a>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-2 col-md-2">
                   <div style="border-right: 1px solid gainsboro; padding-right: 25px; min-height: 130px;">
                     <div style="margin-bottom:25px; font-size:13px; width:100%; ">
                       <a style="color:black" href="http://eportal.tischools.cc/" target="_blank">بوابة الموظف</a>
@@ -625,10 +617,19 @@
                       
                     </div>
                     
-                    <div style="margin-bottom:25px; font-size:13px; width:100%; ">
-                      <a style="color:black" href="مكتبة-الشروحات-التعليمية/index.html">مكتبة-الشروحات-التعليمية</a>
-                      
-                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                  <div style="margin-bottom:25px; font-size:13px; width:100%; ">
+                    <a style="color:black" href="مكتبة-الشروحات-التعليمية/index.html">مكتبة-الشروحات-التعليمية</a>
+                  </div>
+
+                  <div style="margin-bottom:25px; font-size:13px; width:100%; ">
+                    <a style="color:black" href="مكتبة-الشروحات-التعليمية/index.html">مكتبة-الشروحات-التعليمية</a>
+                  </div>
+                  <div style="margin-bottom:25px; font-size:13px; width:100%; ">
+                    <a id="grades" style="color:black" href="#">تقارير الدرجات</a>
                   </div>
                 </div>
               </div>
