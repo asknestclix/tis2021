@@ -49,7 +49,7 @@ function InitializeCalendar(calID) {
         url: "../TISCalendar.aspx/GetCalendarData",
         dataType: "json",
         success: function (data) {
-
+            console.error(data);
             $('body').toggleClass('loading');
             let op = data.d;
             document.getElementById("calendarContainer").innerHTML = "";
