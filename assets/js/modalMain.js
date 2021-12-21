@@ -114,3 +114,10 @@ $('.close').click(function () {
     $('body').removeClass('noScroll');
     
   });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('func');
+
+  if (myParam === "opengrades"){
+    showModal2();
+  }
